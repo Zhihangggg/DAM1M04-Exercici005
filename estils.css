@@ -1,0 +1,52 @@
+body {
+    margin: auto;
+    width: 100%;
+}   
+.freckle{
+  font-family: "Freckle Face", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.topnav{
+    margin: auto;
+    justify-content: center;
+    padding: 15px;
+    width: 100%;
+    max-width: 1000px;
+    background: #ffffff;
+    padding: 20px 0;
+}
+.topnav .menu{
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  gap: 20px;
+}
+/*modificador per els links*/
+.topnav .menu a{
+    font-size: 15px;
+    color: #000;
+    text-decoration: none;
+}
+
+.divhome1{
+    width: 100%;
+    max-width: 700px; 
+    margin:  auto;
+    text-align: center;
+}
+
+.divhome1 h1{
+    font-size: 45px;
+}
+.divhome1 h3{
+    font-size: 20px;
+    margin: 0;
+    color:grey;
+}
+.iconogota{
+    width: 50px;
+}
