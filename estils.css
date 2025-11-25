@@ -1,36 +1,52 @@
 body {
-    margin: auto;
+    margin: 0;
     width: 100%;
 }   
-.freckle{
+.frecklefont{
   font-family: "Freckle Face", system-ui;
   font-weight: 400;
   font-style: normal;
 }
-.topnav{
-    margin: auto;
-    justify-content: center;
-    padding: 15px;
-    width: 100%;
-    max-width: 1000px;
-    background: #ffffff;
-    padding: 20px 0;
+.facefont {
+  font-family: "Freckle Face", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
+
+/*otracos*/
+
+.topnav {
+    margin: auto;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 0;
+    position: sticky;
+    top: 0; 
+    z-index: 100; 
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .topnav .menu{
   list-style: none;
   display: flex;
-  gap: 18px;
-  padding: 0;
-  margin: 0;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: space-between; 
+  padding-right: 30px;
 }
-/*modificador per els links*/
+
 .topnav .menu a{
     font-size: 15px;
     color: #000;
     text-decoration: none;
+    transition: color 0.3s ease; 
 }
+
+.topnav .menu a:hover {
+    color: #3498db;
+}
+
+/*otra cosa*/
 
 .divhome1{
     width: 100%;
@@ -46,7 +62,134 @@ body {
     font-size: 20px;
     margin: 0;
     color:grey;
+    
 }
-.iconogota{
-    width: 50px;
+.divhome1 .material-icons-outlined{
+    font-size: 50px;
+}
+
+
+/*Otra cosa*/
+
+.contenedorcartas {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  gap: 20px;
+}
+.Cartas {
+  width: 30%;
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+  background-color: #f4f4f4;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-property: background-color, box-shadow, transform;
+  transition-duration: 0.5s;
+}
+.Cartas img {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s; 
+}
+.Cartas .original-image {
+  opacity: 1; 
+}
+.Cartas .hover-image {
+  opacity: 0; 
+}
+.Cartas:hover {
+  background-color: #3498db; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
+  transform: scale(1.05); 
+  color: white;
+}
+.Cartas:hover .original-image {
+  opacity: 0;
+}
+.Cartas:hover .hover-image {
+  opacity: 1;
+}
+.Cartas-linear {
+  transition-timing-function: linear;
+}
+.Cartas-ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+.Cartas-ease-out {
+  transition-timing-function: ease-out;
+}
+
+/*Otra cosa*/
+
+.secondary-menu {
+  background-color: #2c3e50;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.secondary-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.secondary-menu li {
+  margin: 0 15px;
+}
+
+.secondary-menu a {
+  text-decoration: none;
+  color: #ecf0f1;
+  font-size: 1.1em;
+  padding: 5px 10px;
+  display: block;
+
+  transition: color 0.4s ease, letter-spacing 0.4s ease;
+  letter-spacing: 1px;
+}
+
+.secondary-menu a:hover {
+  color: #e74c3c;
+  letter-spacing: 3px;
+}
+/*movil*/
+@media (max-width: 768px) {
+    
+    /* Canvi a la mida del títol principal (Hero) */
+    .divhome1 h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Navbar: Enllaços un sota l'altre */
+    .topnav .menu {
+        flex-direction: column; /* Apila els elements */
+        align-items: center;
+        gap: 10px;
+        padding-right: 0;
+    }
+
+    /* Targetes: Canvi de fila a columna */
+    .contenedorcartas {
+        flex-direction: column; /* Apila les targetes */
+        gap: 25px;
+    }
+
+    .Cartas {
+        width: 100%; /* Ocupa tota l'amplada */
+    }
+
+    /* Menú Secundari: Enllaços un sota l'altre */
+    .secondary-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
