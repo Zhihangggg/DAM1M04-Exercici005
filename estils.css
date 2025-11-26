@@ -190,3 +190,149 @@ body {
         gap: 10px;
     }
 }
+
+/*Otra cosa*/
+.loader-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.loader {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite; /* infinite: OBLIGATORI */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*Other*/
+/* Peça Animada Principal */
+.main-animation-container {
+    padding: 50px;
+    text-align: center;
+}
+
+.main-animated-block {
+    width: 150px;
+    height: 150px;
+    background-color: #e74c3c;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    /* Control de repeticions: alternate */
+    animation: bounceAndSpin 3s ease-in-out infinite alternate; /* alternate: OBLIGATORI */
+    animation-delay: 0.5s; /* Exemple de delay */
+}
+
+@keyframes bounceAndSpin {
+    0% { 
+        transform: translateY(0) rotate(0deg) scale(1); 
+        opacity: 1; 
+        background-color: #e74c3c; 
+        color: white; 
+    }
+    25% { 
+        transform: translateY(-50px) rotate(45deg) scale(1.1); 
+        opacity: 0.8; 
+    }
+    50% { 
+        transform: translateY(0) rotate(180deg) scale(0.9); 
+        opacity: 1; 
+        background-color: #2ecc71; 
+        color: black; 
+    }
+    75% { 
+        transform: translateY(-20px) rotate(300deg) scale(1.05); 
+        opacity: 0.9; 
+    }
+    100% { 
+        transform: translateY(0) rotate(360deg) scale(1); 
+        opacity: 1; 
+        background-color: #3498db; 
+        color: white; 
+    }
+}
+
+/*Other*/
+
+/* Estils base per als blocs Scroll-Reveal */
+.scroll-reveal-block {
+    height: 150px;
+    background-color: #f1c40f;
+    margin: 40px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    border-radius: 5px;
+    /* Estat inicial (ocult) */
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+/* Animació d'aparició (MoveUp) */
+@keyframes moveUp {
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* Aplicació de Scroll-Reveal (Compatibilitat moderna) */
+@supports (animation-timeline: view()) {
+    .scroll-reveal-block {
+        animation: moveUp 1s forwards;
+        animation-timeline: view();
+        /* Range diferent per a cada bloc per variar l'aparició */
+    }
+
+    .reveal-1 {
+        animation-range: entry 20% cover 50%;
+    }
+    
+    .reveal-2 {
+        animation-range: entry 0% cover 40%;
+        animation-delay: 0.2s; /* Exemple de delay */
+    }
+
+    .reveal-3 {
+        animation-range: entry 50% cover 80%;
+        animation-direction: normal; /* Direcció (normal/reverse/alternate) */
+    }
+}
+
+/* Fallback obligatori: @supports not (animation-timeline: view()) */
+@supports not (animation-timeline: view()) {
+    .scroll-reveal-block {
+        /* Aplica un estat alternatiu (semi-transparent i lleugerament desplaçat)
+           o una animació alternativa més simple amb JS (no requerit aquí) */
+        opacity: 0.5; 
+        transform: translateY(50px);
+        /* Podries aplicar una animació simple si fos necessari */
+        /* animation: simpleFade 1s forwards; */
+    }
+    
+    /* @keyframes simpleFade {
+        to { opacity: 1; transform: translateY(0); }
+    } */
+
+    .scroll-reveal-block::before {
+        content: " (Fallback: Navegador sense suport a scroll-timeline)";
+        font-size: 0.8em;
+        color: #c0392b;
+    }
+}
