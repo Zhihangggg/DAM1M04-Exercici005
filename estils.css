@@ -95,6 +95,7 @@ body {
   display: block;
   position: absolute;
   top: 0;
+  
   left: 0;
   transition: opacity 0.5s; 
 }
@@ -105,10 +106,8 @@ body {
   opacity: 0; 
 }
 .Cartas:hover {
-  background-color: #3498db; 
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
   transform: scale(1.05); 
-  color: white;
+  color: white; 
 }
 .Cartas:hover .original-image {
   opacity: 0;
@@ -164,30 +163,28 @@ body {
 /*movil*/
 @media (max-width: 768px) {
     
-    /* Canvi a la mida del títol principal (Hero) */
     .divhome1 h1 {
         font-size: 2.5rem;
     }
 
-    /* Navbar: Enllaços un sota l'altre */
+    
     .topnav .menu {
-        flex-direction: column; /* Apila els elements */
+        flex-direction: column; 
         align-items: center;
         gap: 10px;
         padding-right: 0;
     }
 
-    /* Targetes: Canvi de fila a columna */
+    
     .contenedorcartas {
-        flex-direction: column; /* Apila les targetes */
+        flex-direction: column; 
         gap: 25px;
     }
 
     .Cartas {
-        width: 100%; /* Ocupa tota l'amplada */
+        width: 100%; 
     }
 
-    /* Menú Secundari: Enllaços un sota l'altre */
     .secondary-menu ul {
         flex-direction: column;
         gap: 10px;
