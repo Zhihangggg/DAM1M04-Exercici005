@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estils.css">
     <title>Guia d'estil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
 </head>
 <body>
     <div class="blanco">
@@ -16,5 +18,129 @@
             </ul>
         </div>
     </div>
+    
+    <main style="padding: 20px;">
+        <h1 class="facefont" style="text-align: center; margin-top: 30px;">Guia d'Estil del Projecte</h1>
+
+        <section id="tipografia">
+            <h2 class="section-title frecklefont">Tipografia i Escala</h2>
+            
+            <h1 class="font-display weight-700">Títol H1 (700 / 3.0rem)</h1>
+            <h2 class="font-display weight-400">Títol H2 (400 / 2.0rem)</h2>
+            <h3 class="font-display weight-300">Títol H3 (300 / 1.5rem)</h3>
+            
+            <p class="paragraph-style">
+                Aquest és un paràgraf d'exemple. Utilitzem **font-family: Roboto**, amb un **font-weight: 400**. El nostre **line-height** és d'1.6. L'escala és **rem-based**.
+            </p>
+            
+            <p class="paragraph-style light-text">
+                Aquest paràgraf mostra un pes de font **light (300)**. L'objectiu de l'escala tipogràfica és mantenir la consistència i l'accessibilitat.
+            </p>
+        </section>
+
+        <hr>
+
+        <section id="baseline">
+            <h2 class="section-title frecklefont">Alineació a Baseline</h2>
+            <div class="baseline-example">
+                <span class="material-symbols-outlined icon-baseline">
+                    verified_user
+                </span>
+                <span class="text-baseline">Text alineat perfectament</span>
+                <span class="material-symbols-outlined icon-baseline larger-icon">
+                    schedule
+                </span>
+                <span class="text-baseline">Icona gran al costat del text</span>
+            </div>
+            <p class="accessibility-note">
+                ✅ **Accessibilitat:** Assegureu-vos d'utilitzar un contrast mínim de 4.5:1 per al text normal sobre el fons.
+            </p>
+        </section>
+
+        <hr>
+
+        <section id="icons">
+            <h2 class="section-title frecklefont">Material Icons (Mida i Pes Variable)</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Icona</th>
+                        <th>Nom</th>
+                        <th>Estils Variables (opsz, wght, FILL)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="icon-cell"><span class="material-symbols-outlined icon-default">home</span></td>
+                        <td>Default</td>
+                        <td>**opsz:** 24, **wght:** 400, **FILL:** 0</td>
+                    </tr>
+                    <tr>
+                        <td class="icon-cell"><span class="material-symbols-outlined icon-filled">star</span></td>
+                        <td>FILL (Remplenada)</td>
+                        <td>**FILL:** 1</td>
+                    </tr>
+                    <tr>
+                        <td class="icon-cell"><span class="material-symbols-outlined icon-heavy">settings</span></td>
+                        <td>Weight Pesat</td>
+                        <td>**wght:** 700</td>
+                    </tr>
+                    <tr>
+                        <td class="icon-cell"><span class="material-symbols-outlined icon-large-thin">rocket_launch</span></td>
+                        <td>Mida Gran/Pes Lleuger</td>
+                        <td>**opsz:** 48, **wght:** 100</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section id="buttons-links">
+            <h2 class="section-title frecklefont">Botons i Links amb Hover</h2>
+
+            <button class="styled-button">
+                <span class="material-symbols-outlined">save</span> Guardar Canvis
+            </button>
+
+            <a href="#" class="styled-link">
+                Més informació <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+        </section>
+
+        <hr>
+
+        <section id="colors">
+            <h2 class="section-title frecklefont">Mostrari de Colors</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mostra</th>
+                        <th>Format HEX</th>
+                        <th>Format RGB</th>
+                        <th>Format HSL</th>
+                        <th>Format RGBA (Alpha)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="background-color: #2c3e50;"></td>
+                        <td>`#2c3e50`</td>
+                        <td>`rgb(44, 62, 80)`</td>
+                        <td>`hsl(210, 27%, 24%)`</td>
+                        <td>`rgba(44, 62, 80, 1)`</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: rgba(46, 204, 113, 0.5);"></td>
+                        <td>`#2ecc71`</td>
+                        <td>`rgb(46, 204, 113)`</td>
+                        <td>`hsl(147, 73%, 49%)`</td>
+                        <td>`rgba(46, 204, 113, 0.5)`</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
 </body>
 </html>
