@@ -219,6 +219,7 @@ body {
 /*Other*/
 .Caja_contenedor {
     padding: 100px;
+    padding-bottom: 100px;
 }
 .Caja_animado {
     width: 150px;
@@ -331,31 +332,120 @@ body {
     }
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estils.css">
-    <title>Home</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Freckle+Face&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="topnav">
-      <div>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="guia-estil.html">Guia d'estil</a></li>
-            </ul>  
-        </div>
-    </div>
+/*iotra*/
 
-</body>
-</html>
+
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.containter p {
+    text-align: justify;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.highlight {
+    text-align: center;
+    margin: 25px 0;
+    padding: 10px;
+    border-left: 4px solid #007acc;
+}
+
+.sizes-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.sizes-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.sizes-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.size-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+.size-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.size-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.submit-btn {
+    display: block;
+    border-radius: 8px;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+
+.submit-btn::before {
+    content: "▶";
+    font-weight: bold;
+}
+
+.color-palette {
+    margin-top: 40px;
+    text-align: center;
+    padding-bottom: 179px;
+}
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid #333;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+th {
+    background-color: #e0f7e0;
+    font-weight: bold;
+}
+
+.hex-cell {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.groccell {
+    background-color: #f5a623;
+    color: black;
+}
+
+
+
