@@ -1,146 +1,285 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estils.css">
-    <title>Guia d'estil</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <title>Guía de Estilos - Insectos</title>
+    <style>
+        /* Reset básico y estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #c2f0c2; /* Verde claro como fondo general */
+            line-height: 1.6;
+            color: #000;
+        }
+
+        /* Encabezado de navegación */
+        header {
+            background-color: #e0f7e0;
+            padding: 15px 0;
+            text-align: center;
+            border-bottom: 1px solid #b3e6b3;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #007acc;
+        }
+
+        /* Contenido principal */
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: transparent;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .highlight {
+            text-align: center;
+            margin: 25px 0;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-left: 4px solid #007acc;
+            font-style: italic;
+        }
+
+        .highlight::before {
+            content: "🐞 ";
+            font-size: 1.2em;
+            vertical-align: middle;
+        }
+
+        /* Sección de tamaños de insectos */
+        .sizes-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .sizes-section h2 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .sizes-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .size-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100px;
+        }
+
+        .size-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .size-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* Botón Enviar */
+        .submit-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background-color: #a5d6a7;
+            border: 2px solid #81c784;
+            border-radius: 8px;
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .submit-btn:hover {
+            background-color: #81c784;
+            transform: translateY(-2px);
+        }
+
+        .submit-btn::before {
+            content: "▶ ";
+            font-weight: bold;
+        }
+
+        /* Paleta de colores */
+        .color-palette {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .color-palette h2 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
+            border: 2px solid #333;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #333;
+        }
+
+        th {
+            background-color: #e0f7e0;
+            font-weight: bold;
+        }
+
+        tr:nth-child(2) td {
+            background-color: #4a90e2;
+            color: white;
+        }
+
+        tr:nth-child(3) td {
+            background-color: #f5a623;
+            color: black;
+        }
+
+        /* Estilos para las celdas de color */
+        .color-cell {
+            width: 20%;
+        }
+
+        .hex-cell {
+            background-color: #4a90e2;
+            color: white;
+        }
+
+        .groccell {
+            background-color: #f5a623;
+            color: black;
+        }
+
+    </style>
 </head>
 <body>
-    <div class="blanco">
-      <div class="topnav">
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="guia-estil.html">Guia d'estil</a></li>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#" style="color: #000; font-weight: bold;">Guia de Estilos</a></li>
             </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <h1>Los insectos son animales</h1>
+
+        <p>Los insectos (Insecta) son una clase de animales invertebrados del filo de los artrópodos, caracterizados por presentar un par de antenas, tres pares de patas y dos pares de alas (que, no obstante, pueden reducirse o faltar). La ciencia que estudia los insectos se denomina entomología.</p>
+
+        <p>Su nombre proviene del latín insectum, calco del griego ἔντομα, cortado en medio.</p>
+
+        <p>Pueden encontrarse en casi todos los ambientes del planeta, aunque solo un pequeño número de especies se ha adaptado a la vida en los océanos.</p>
+
+        <p>No solo presentan una gran diversidad, sino que también son increíblemente abundantes.</p>
+
+        <div class="highlight">
+            Los insectos son la clase de organismos con mayor riqueza de especies en el planeta
         </div>
-    </div>
-    
-    <main style="padding: 20px;">
-        <h1 class="facefont" style="text-align: center; margin-top: 30px;">Guia d'Estil del Projecte</h1>
 
-        <section id="tipografia">
-            <h2 class="section-title frecklefont">Tipografia i Escala</h2>
-            
-            <h1 class="font-display weight-700">Títol H1 (700 / 3.0rem)</h1>
-            <h2 class="font-display weight-400">Títol H2 (400 / 2.0rem)</h2>
-            <h3 class="font-display weight-300">Títol H3 (300 / 1.5rem)</h3>
-            
-            <p class="paragraph-style">
-                Aquest és un paràgraf d'exemple. Utilitzem **font-family: Roboto**, amb un **font-weight: 400**. El nostre **line-height** és d'1.6. L'escala és **rem-based**.
-            </p>
-            
-            <p class="paragraph-style light-text">
-                Aquest paràgraf mostra un pes de font **light (300)**. L'objectiu de l'escala tipogràfica és mantenir la consistència i l'accessibilitat.
-            </p>
-        </section>
-
-        <hr>
-
-        <section id="baseline">
-            <h2 class="section-title frecklefont">Alineació a Baseline</h2>
-            <div class="baseline-example">
-                <span class="material-symbols-outlined icon-baseline">
-                    verified_user
-                </span>
-                <span class="text-baseline">Text alineat perfectament</span>
-                <span class="material-symbols-outlined icon-baseline larger-icon">
-                    schedule
-                </span>
-                <span class="text-baseline">Icona gran al costat del text</span>
+        <div class="sizes-section">
+            <h2>Tamaños de insectos</h2>
+            <div class="sizes-container">
+                <div class="size-item">
+                    <span class="size-icon">🐜</span>
+                    <span class="size-label">Pequeños</span>
+                </div>
+                <div class="size-item">
+                    <span class="size-icon">🐝</span>
+                    <span class="size-label">Medianos</span>
+                </div>
+                <div class="size-item">
+                    <span class="size-icon">🪲</span>
+                    <span class="size-label">Grandes</span>
+                </div>
             </div>
-            <p class="accessibility-note">
-                ✅ **Accessibilitat:** Assegureu-vos d'utilitzar un contrast mínim de 4.5:1 per al text normal sobre el fons.
-            </p>
-        </section>
+        </div>
 
-        <hr>
+        <a href="#" class="submit-btn">Enviar</a>
 
-        <section id="icons">
-            <h2 class="section-title frecklefont">Material Icons (Mida i Pes Variable)</h2>
-
+        <div class="color-palette">
+            <h2>Paleta de colores</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Icona</th>
-                        <th>Nom</th>
-                        <th>Estils Variables (opsz, wght, FILL)</th>
+                        <th>Color</th>
+                        <th>HEX</th>
+                        <th>RGB</th>
+                        <th>HSL</th>
+                        <th>Alpha</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="icon-cell"><span class="material-symbols-outlined icon-default">home</span></td>
-                        <td>Default</td>
-                        <td>**opsz:** 24, **wght:** 400, **FILL:** 0</td>
+                        <td>Blau principal</td>
+                        <td class="hex-cell">#4A90E2</td>
+                        <td>74,144,226</td>
+                        <td>217,79%,59%</td>
+                        <td>rgba(74,144,226,0.8)</td>
                     </tr>
                     <tr>
-                        <td class="icon-cell"><span class="material-symbols-outlined icon-filled">star</span></td>
-                        <td>FILL (Remplenada)</td>
-                        <td>**FILL:** 1</td>
-                    </tr>
-                    <tr>
-                        <td class="icon-cell"><span class="material-symbols-outlined icon-heavy">settings</span></td>
-                        <td>Weight Pesat</td>
-                        <td>**wght:** 700</td>
-                    </tr>
-                    <tr>
-                        <td class="icon-cell"><span class="material-symbols-outlined icon-large-thin">rocket_launch</span></td>
-                        <td>Mida Gran/Pes Lleuger</td>
-                        <td>**opsz:** 48, **wght:** 100</td>
+                        <td>Groc</td>
+                        <td class="groccell">#F5A623</td>
+                        <td>245,166,35</td>
+                        <td>38,89%,55%</td>
+                        <td>rgba(245,166,35,0.8)</td>
                     </tr>
                 </tbody>
             </table>
-        </section>
+        </div>
 
-        <hr>
+    </div>
 
-        <section id="buttons-links">
-            <h2 class="section-title frecklefont">Botons i Links amb Hover</h2>
-
-            <button class="styled-button">
-                <span class="material-symbols-outlined">save</span> Guardar Canvis
-            </button>
-
-            <a href="#" class="styled-link">
-                Més informació <span class="material-symbols-outlined">arrow_forward</span>
-            </a>
-        </section>
-
-        <hr>
-
-        <section id="colors">
-            <h2 class="section-title frecklefont">Mostrari de Colors</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Mostra</th>
-                        <th>Format HEX</th>
-                        <th>Format RGB</th>
-                        <th>Format HSL</th>
-                        <th>Format RGBA (Alpha)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="background-color: #2c3e50;"></td>
-                        <td>`#2c3e50`</td>
-                        <td>`rgb(44, 62, 80)`</td>
-                        <td>`hsl(210, 27%, 24%)`</td>
-                        <td>`rgba(44, 62, 80, 1)`</td>
-                    </tr>
-                    <tr>
-                        <td style="background-color: rgba(46, 204, 113, 0.5);"></td>
-                        <td>`#2ecc71`</td>
-                        <td>`rgb(46, 204, 113)`</td>
-                        <td>`hsl(147, 73%, 49%)`</td>
-                        <td>`rgba(46, 204, 113, 0.5)`</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
 </body>
 </html>
