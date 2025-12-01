@@ -1,6 +1,7 @@
 body {
     margin: 0;
     width: 100%;
+    
 }   
 .frecklefont{
   font-family: "Freckle Face", system-ui;
@@ -164,36 +165,7 @@ body {
   color: #e74c3c;
   letter-spacing: 3px;
 }
-/*movil*/
-@media (max-width: 768px) {
-    
-    .divhome1 h1 {
-        font-size: 2.5rem;
-    }
 
-    
-    .topnav .menu {
-        flex-direction: column; 
-        align-items: center;
-        gap: 10px;
-        padding-right: 0;
-    }
-
-    
-    .contenedorcartas {
-        flex-direction: column; 
-        gap: 25px;
-    }
-
-    .Cartas {
-        width: 100%; 
-    }
-
-    .secondary-menu ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
 
 /*Otra cosa*/
 .contenedor_carga {
@@ -217,49 +189,62 @@ body {
 }
 
 /*Other*/
-.Caja_contenedor {
-    padding: 100px;
-    padding-bottom: 100px;
+.divblau{
+    padding: 200px;
 }
-.Caja_animado {
-    width: 150px;
-    height: 150px;
+
+.ball {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: red;
+    animation: bounceAndSpin 3s infinite;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    animation: bounceAndSpin 3s ease-in-out infinite alternate; 
+  }
+.ball p{
+  margin: 0;
 }
 
-@keyframes bounceAndSpin {
-    0% { 
-        transform: translateY(0) rotate(0deg) scale(1); 
-        opacity: 1; 
-        background-color: #e74c3c; 
-        color: white; 
+  @keyframes bounceAndSpin {
+    0% {
+      transform: translateY(0) rotate(0deg) scale(1);
+      background-color: #ff0000;
+      border-radius: 50%;
     }
-    25% { 
-        transform: translateY(-50px) rotate(45deg) scale(1.1); 
-        opacity: 0.8; 
+    
+    20% {
+      transform: translateX(-200px) rotate(90deg) scale(1.2);
+      background-color: #00857c;
+      border-radius: 50%;
     }
-    50% { 
-        transform: translateY(0) rotate(180deg) scale(0.9); 
-        opacity: 1; 
-        background-color: #2ecc71; 
-        color: black; 
+    
+    40% {
+      transform: translateY(200px) rotate(180deg) scale(1);
+      background-color: #ffd500;
+      border-radius: 30%;
     }
-    75% { 
-        transform: translateY(-20px) rotate(300deg) scale(1.05); 
-        opacity: 0.9; 
+    
+    60% {
+      transform: translateX(200px) rotate(270deg) scale(0.8);
+      background-color: #b200d6;
+      border-radius: 50%;
     }
-    100% { 
-        transform: translateY(0) rotate(360deg) scale(1); 
-        opacity: 1; 
-        background-color: #3498db; 
-        color: white; 
+    
+    80% {
+      transform: translateY(-200px) rotate(360deg) scale(1);
+      background-color: #0022ff;
+      border-radius: 50%;
     }
-}
+
+    100% {
+      transform: translateY(0) rotate(360deg) scale(1);
+      background-color: #0022ff;
+      border-radius: 50%;
+    }
+  }
 
 /*Other*/
 
