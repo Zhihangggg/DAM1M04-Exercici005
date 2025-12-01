@@ -18,6 +18,21 @@ body {
     background-color:  #0096d2;
 }
 
+.avion{
+    text-align: center;
+    justify-content: center;
+}
+
+.avion a{
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  text-decoration: none;
+}
+
+.avion .material-symbols-outlined {
+  font-size: 50px;
+}
+
 /*otracos*/
 
 .topnav {
@@ -392,12 +407,6 @@ body {
 }
 
 
-
-.submit-btn::before {
-    content: "▶";
-    font-weight: bold;
-}
-
 .color-palette {
     margin-top: 40px;
     text-align: center;
@@ -434,3 +443,80 @@ th {
 
 
 
+@media (max-width: 768px) {
+
+    .topnav .menu {
+        flex-direction: column;
+        gap: 10px;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .topnav .menu a {
+        font-size: 18px;
+    }
+
+    .divhome1 h1 {
+        font-size: 32px;
+    }
+
+    .divhome1 h3 {
+        font-size: 16px;
+    }
+
+    .contenedorcartas {
+        flex-direction: column;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .Cartas {
+        width: 100%;
+        height: auto;
+    }
+
+    .secondary-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .highlight {
+        font-size: 0.9rem;
+    }
+
+    .sizes-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .size-item {
+        width: 100%;
+    }
+
+    .scroll-reveal-block {
+        margin: 20px 10px;
+    }
+
+    .container {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    table {
+        font-size: 0.8rem;
+        width: 100%;
+    }
+
+    .divblau {
+        padding: 80px 20px;
+    }
+
+    .ball {
+        width: 60px;
+        height: 60px;
+    }
+
+    .espacio{
+        padding: 40px;
+    }
+}
